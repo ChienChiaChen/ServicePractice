@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 		view.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Log.e(MainActivity.class.getSimpleName(), "Test");
+				Log.e("in timer", "Test");
+				stopService(mServiceIntent);
 			}
 		});
 	}
