@@ -18,6 +18,17 @@
         </activity>
         <service android:name=".SensorService"
                  android:enabled="true" />
+
+        <receiver android:name=".RestarterBroadcastReceiver"
+                  android:enabled="true"
+                  android:exported="true"
+                  android:label="RestartServiceWhenStopped">
+            <intent-filter>
+                <action android:name="ActivityRecognition.RestartSensor"/>
+            </intent-filter>
+
+        </receiver>
+
     </application>
 
 </manifest>
